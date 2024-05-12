@@ -1,6 +1,8 @@
 # Contact Registration
 This project is designed to facilitate knowledge-sharing among fellow students, focusing on the concepts taught during Web Interface Development classes. It serves as a resource for the development of the final project of the first term.
 
+![Image of the contact registration website](https://github.com/ArturColen/ContactRegistration/assets/96635074/c53f7d5c-43d4-403f-9fc0-3fcdb348b07b)
+
 ## 🔨 Project functionality
 The project features a contact registry with CRUD (Create, Read, Update, Delete) functionality, allowing users to create, read, update, and delete contact data. This functionality is implemented using pure JavaScript and the JSON Server library, simulating a web server (API).
 
