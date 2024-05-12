@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Artur Bomtempo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de contatos</title>
     <!-- === Bootstrap === -->
@@ -9,11 +10,96 @@
     <!-- === CSS File === -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body onload="init()">
+    <h1>Cadastro de Contatos</h1>
+    <div class="container">
+        <div class="row">
+            <div id="message" class="col-sm-10 offset-sm-1 "></div>
+        </div>
+        <form id="contact-form">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputName">Nome (*)</label>
+                    <input type="text" class="form-control" id="inputName" required placeholder="Digite o nome do contato">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputPhone">Telefone (*)</label>
+                    <input type="text" class="form-control" id="inputPhone" required placeholder="Digite o número de telefone do contato">
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputEmail">E-mail (*)</label>
+                    <input type="email" class="form-control" id="inputEmail" required placeholder="Digite o e-mail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputCity">Cidade</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Digite a cidade do contato" >
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputCategory">Categoria</label>
+                    <input type="text" class="form-control" id="inputCategory" required placeholder="Digite a categoria do contato">
+                </div>
+            </div>
+            <div class="form-group row">    
+                <div class="col-sm-12">
+                    <label for="inputWebsite">Site (*)</label>
+                    <input type="text" class="form-control" id="inputWebsite" required placeholder="Digite o link do site do contato">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <small>(*) Campos obrigatórios</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar">
+                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                    <a href="./pages/list-contacts.html"><input type="button" class="btn btn-warning" value="Pesquisar Contatos"></a>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="contact-grid" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Cidade</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Site</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contact-table">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     
-    <!-- === Bootstrap === -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- === JS Files === -->
-    <script src="./assets/js/connection.js"></script>
+    <script src="./assets/js/connection.js"></script>~~
+    <script src="./assets/js/contact-crud.js"></script>
 </body>
 </html>

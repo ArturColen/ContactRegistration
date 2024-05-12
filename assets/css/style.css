@@ -3,3 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+label{
+    font-weight: bolder;
+}
+
+::placeholder, ::-webkit-input-placeholder, ::-moz-placeholder{
+    color: #add8e6 !important;
+}
+
+::placeholder, ::-moz-placeholder{
+    opacity: 3;
+}
+
+h1{
+    text-align: center;
+}
+
+#message{
+    height: 60px;
+}
+
+#contact-grid tbody{
+    cursor: pointer;
+}
