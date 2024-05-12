@@ -3,7 +3,7 @@ function displayContacts() {
 
     contactTable.innerHTML = '';
 
-    readContato(data => {
+    readContacts(data => {
         for (i = 0; i < data.length; i++) {
             let contact = data[i];
 
@@ -50,7 +50,7 @@ function init() {
             website: websiteField
         };
 
-        createContato(contact, displayContacts);
+        createContact(contact, displayContacts);
 
         contactForm.reset();
     });
@@ -78,7 +78,7 @@ function init() {
             website: websiteField
         };
 
-        updateContato(parseInt(idField), contact, displayContacts);
+        updateContacts(parseInt(idField), contact, displayContacts);
 
         contactForm.reset();
     });
@@ -91,7 +91,7 @@ function init() {
             return;
         }
 
-        deleteContato(parseInt(idField), displayContacts);
+        deleteContact(parseInt(idField), displayContacts);
 
         contactForm.reset();
     });

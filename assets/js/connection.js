@@ -5,7 +5,7 @@ function displayMessage(message, alertType) {
     messageElement.innerHTML = `<div class="alert alert-${alertType}">${message}</div>`;
 }
 
-function createContato(contact, updateFunction) {
+function createContact(contact, updateFunction) {
     fetch(apiUrl, {
         method: 'POST',
         headers: {
@@ -27,7 +27,7 @@ function createContato(contact, updateFunction) {
         });
 }
 
-function readContato(processData) {
+function readContacts(processData) {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
@@ -39,7 +39,7 @@ function readContato(processData) {
         });
 }
 
-function updateContato(id, contact, updateFunction) {
+function updateContacts(id, contact, updateFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'PUT',
         headers: {
@@ -61,7 +61,7 @@ function updateContato(id, contact, updateFunction) {
         });
 }
 
-function deleteContato(id, updateFunction) {
+function deleteContact(id, updateFunction) {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
     })

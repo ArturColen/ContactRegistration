@@ -1,6 +1,6 @@
 var db = []
 
-readContato(data => {
+readContacts(data => {
     db = data;
     listContacts();
 });
